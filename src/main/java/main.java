@@ -1,22 +1,21 @@
 import java.io.Console;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import tactifit.api.TrainingSession;
+import tactifit.implementation.flavours.Pause;
 import tactifit.implementation.flavours.Standard21n15n9;
 
 public class main {
 
 	public static void main(String[] args) {
+		/*ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+		TrainingSession trainingSession = context.getBean("trainingSession", TrainingSession.class);*/
 		TrainingSession trainingSession = new TrainingSession();
-		Console console = System.console();
-		String newTraining = console.readLine("Hello! What kind of a training would you like to add to the session?\t");
-		switch (newTraining) {
-		case "21-15-9":
-			String exercise1 = console.readLine("What will be the first exercise?\t");
-			String exercise2 = console.readLine("What will be the second exercise?\t");
-			trainingSession.addTraining(new Standard21n15n9(exercise1, exercise2));
-
-		}
-		trainingSession.startSession();
+		trainingSession.setUpSession(trainingSession);
+		trainingSession.startSessionText();
+		trainingSession.endSessionText();
 	}
 
 }

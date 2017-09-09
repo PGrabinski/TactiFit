@@ -1,6 +1,9 @@
 package tactifit.api;
 
 public interface Training {
-	public void startTraining();
-	public void setUpTraining();
+	public void startTrainingText();
+	public static Training getInstanceText() {
+		System.out.println("This training is not suppposed to be added to any training session.");
+		return null;
+	};
 }
