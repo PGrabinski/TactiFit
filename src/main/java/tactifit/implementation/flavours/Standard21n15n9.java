@@ -29,7 +29,7 @@ public class Standard21n15n9 implements Training {
 					System.out.println("Great! Keep going!");
 					break;
 				} else {
-					System.out.println("Yes or not!");
+					System.out.println("Yes or no!");
 				}
 			} while (notDone);
 		}

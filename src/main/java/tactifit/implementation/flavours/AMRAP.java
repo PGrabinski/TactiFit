@@ -29,10 +29,6 @@ public class AMRAP implements Training {
 	@Override
 	public void startTrainingText() {
 		System.out.println("We begin the AMRAP training!");
-		/*while((System.nanoTime() - beginingOfTraining) / 1000000000 < trainingLength * 60) {
-			
-		}
-*/
 		System.out.println("For next " + trainingLength + " minutes keep doing the following exercises:");
 		for(Exercise exercise : listOfExercises) {
 			System.out.println(exercise);
