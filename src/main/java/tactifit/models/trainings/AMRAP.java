@@ -42,7 +42,7 @@ public class AMRAP implements Training {
 		}
 	}
 
-	public static Training getInstanceText() {
+	public static Training getInstance() {
 		Console console = System.console();
 		String exerciseNumber = console
 				.readLine("How many exercises would you like to include in the AMRAP training?\t");

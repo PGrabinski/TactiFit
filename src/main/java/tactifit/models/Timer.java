@@ -2,15 +2,15 @@ package tactifit.models;
 
 import tactifit.view.View;
 
+// Simple timer class.
+// To be edited as now onlu fits the console version
 public class Timer {
     private int beginingTime;
     private int givenTime;
     private int passedTime = 0;
-    private View view;
     
-    Timer(int givenTime, View view) {
+    public Timer(int givenTime) {
         this.givenTime = givenTime;
-        this.view = view;
     };
 
     public void startTimeOut() {

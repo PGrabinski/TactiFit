@@ -66,7 +66,7 @@ public class TrainingController {
 				// 	addTraining(SimpleSet.getInstanceText());
 				// 	break;
 				case "7":
-					addTraining(Pause.getInstanceText());
+					addTraining(Pause.getInstance(this.view));
 					break;
 			}
 
