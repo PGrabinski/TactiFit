@@ -1,4 +1,4 @@
-package tactifit.api;
+package tactifit.models;
 
 public interface Training {
 	public void startTrainingText();

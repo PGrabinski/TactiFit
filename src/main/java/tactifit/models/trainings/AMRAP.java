@@ -1,19 +1,18 @@
-package tactifit.implementation.flavours;
+package tactifit.models.trainings;
 
 import java.io.Console;
 import java.util.ArrayList;
 
-import javax.swing.text.AbstractDocument.LeafElement;
 
-import tactifit.api.Training;
-import tactifit.domain.Exercise;
+import tactifit.models.Training;
+import tactifit.models.Exercise;
 
 public class AMRAP implements Training {
 	private ArrayList<Exercise> listOfExercises = new ArrayList<>();
 	private int trainingLength;
 	private long beginingOfTraining = System.nanoTime();
 
-	public AMRAP(ArrayList<Exercise> listOfExercises, int trainingLength) {
+	private AMRAP(ArrayList<Exercise> listOfExercises, int trainingLength) {
 		this.listOfExercises = listOfExercises;
 		this.trainingLength = trainingLength;
 	}

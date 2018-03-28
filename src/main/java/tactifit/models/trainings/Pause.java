@@ -1,13 +1,13 @@
-package tactifit.implementation.flavours;
+package tactifit.models.trainings;
 
 import java.io.Console;
 
-import tactifit.api.Training;
+import tactifit.models.Training;
 
 public class Pause implements Training {
 	private int time;
 
-	public Pause(String time) {
+	private Pause(String time) {
 		this.time = Integer.parseInt(time);
 	}
 
