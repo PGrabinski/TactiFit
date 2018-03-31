@@ -28,7 +28,7 @@ public class TrainingController {
 	public void start() {
 		view.customMessage("We begine our new trainning session at: " + beginingDate);
 		for (Training training : listOfTrainings) {
-			training.startTrainingText();
+			training.startTraining();
 			view.tellTimeNow();
 		}
 		view.customMessage("Awesome! You have finished the workout! Now do some streatching, take a shower and hit a bar! You have earned it!");
@@ -54,7 +54,7 @@ public class TrainingController {
 				// 	addTraining(EMOM.getInstanceText());
 				// 	break;
 				case "3":
-					addTraining(AMRAP.getInstanceText());
+					addTraining(AMRAP.getInstance());
 					break;
 				// case "4":
 				// 	addTraining(DeathBySth.getInstanceText());

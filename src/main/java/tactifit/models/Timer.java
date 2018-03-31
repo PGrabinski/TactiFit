@@ -21,4 +21,8 @@ public class Timer {
         }
     }
 
+    public int getTime() {
+        return this.givenTime;
+    }
+
 }

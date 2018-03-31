@@ -3,6 +3,7 @@ package tactifit.view;
 import java.util.List;
 
 import tactifit.models.Exercise;
+import tactifit.models.Timer;
 
 // Interface decoupling the view part according to the MVC model.
 // Should be implemented by a singleton class.
@@ -35,6 +36,9 @@ public interface View {
     // Generates view for a custom message
     public void customMessage(String message);
     
+    // Generates pause response
+    public void pauseWithTimer(Timer timer);
+
     // Not sure if needed
     // public List<Exercise> readExercises();
     // public void chooseTraining();

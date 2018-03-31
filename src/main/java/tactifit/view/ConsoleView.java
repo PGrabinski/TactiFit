@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tactifit.models.Exercise;
+import tactifit.models.Timer;
 
 // Console implementation of view interface
 // For documentation see View.java
@@ -72,6 +73,11 @@ public class ConsoleView implements View{
         System.out.println(message);
     }
 
+    public void pauseWithTimer(Timer timer) {
+		this.customMessage("You have a break for " + timer.getTime() + " seconds.");
+		timer.startTimeOut();
+		this.customMessage("The break is over! Get back to work!");        
+    }
 
     // public void chooseTraining(){};
     

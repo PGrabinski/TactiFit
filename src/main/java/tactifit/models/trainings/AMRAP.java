@@ -26,7 +26,7 @@ public class AMRAP implements Training {
 	}
 
 	@Override
-	public void startTrainingText() {
+	public void startTraining() {
 		System.out.println("We begin the AMRAP training!");
 		System.out.println("For next " + trainingLength + " minutes keep doing the following exercises:");
 		for(Exercise exercise : listOfExercises) {

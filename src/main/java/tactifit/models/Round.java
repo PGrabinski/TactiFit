@@ -22,15 +22,39 @@ public class Round {
 	}
 
 	public void setReps(int reps) {
-		this.reps = reps;
+		if (this.onReps){
+			this.reps = reps;
+		}
 	}
 
 	public void setTime(int time) {
-		this.time = time;
+		if (this.onTime) {
+			this.time = time;
+		}
+	}
+
+	/**
+	 * @return the onReps
+	 */
+	public boolean isOnReps() {
+		return onReps;
+	}
+
+	/**
+	 * @return the onTime
+	 */
+	public boolean isOnTime() {
+		return onTime;
 	}
 	
 	@Override
 	public String toString() {
-		return "Take a round of " + reps + " " + exercise +"s.";
+		if (this.onReps) {
+			return "Take a round of " + this.reps + " " + this.exercise + "s.";
+		}
+		if (this.onTime) {
+			return "It will take " + this.time + " seconds";
+		}
+		return "";
 	}
 }
