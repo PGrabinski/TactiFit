@@ -9,13 +9,17 @@ import tactifit.models.Timer;
 // Should be implemented by a singleton class.
 public interface View {
     
-    // Implies the singleton structure of the class
+    /** Implies the singleton structure of the class
+     * @return a signleton instance of the class
+     */
     public View getViewGenerator();
     
-    // Generates welcome view
+    /** Generates welcome view
+     */
     public void greetings();
     
-    // Returns current time - is it needed?
+    /** Returns current time - is it needed?
+     */
     public void tellTimeNow();
     
     // Asks about next training to be added

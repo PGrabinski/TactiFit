@@ -78,10 +78,4 @@ public class ConsoleView implements View{
 		timer.startTimeOut();
 		this.customMessage("The break is over! Get back to work!");        
     }
-
-    // public void chooseTraining(){};
-    
-    // public List<Exercise> readExercises() {
-    //     return new ArrayList();
-    // };
 }

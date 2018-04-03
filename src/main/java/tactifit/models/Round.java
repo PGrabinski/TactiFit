@@ -53,7 +53,7 @@ public class Round {
 			return "Take a round of " + this.reps + " " + this.exercise + "s.";
 		}
 		if (this.onTime) {
-			return "It will take " + this.time + " seconds";
+			return "Roudn of " + this.exercise + " will take " + this.time + " seconds";
 		}
 		return "";
 	}

@@ -1,6 +1,7 @@
 package tactifit.models;
 
 public interface Training {
+	// private List<Round> exercises;
 	
 	public void startTraining();
 

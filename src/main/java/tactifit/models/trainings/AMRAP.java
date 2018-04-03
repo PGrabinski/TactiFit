@@ -6,18 +6,21 @@ import java.util.ArrayList;
 
 import tactifit.models.Training;
 import tactifit.models.Exercise;
+import tactifit.models.Round;
 
 public class AMRAP implements Training {
-	private ArrayList<Exercise> listOfExercises = new ArrayList<>();
+	private ArrayList<Round> listOfExercises = new ArrayList<>();
 	private int trainingLength;
+
+	// Probably not needed
 	private long beginingOfTraining = System.nanoTime();
 
-	private AMRAP(ArrayList<Exercise> listOfExercises, int trainingLength) {
+	private AMRAP(ArrayList<Round> listOfExercises, int trainingLength) {
 		this.listOfExercises = listOfExercises;
 		this.trainingLength = trainingLength;
 	}
 
-	public ArrayList<Exercise> getListOfExercises() {
+	public ArrayList<Round> getListOfExercises() {
 		return listOfExercises;
 	}
 
@@ -29,8 +32,8 @@ public class AMRAP implements Training {
 	public void startTraining() {
 		System.out.println("We begin the AMRAP training!");
 		System.out.println("For next " + trainingLength + " minutes keep doing the following exercises:");
-		for(Exercise exercise : listOfExercises) {
-			System.out.println(exercise);
+		for(Round round : listOfExercises) {
+			System.out.println(round);
 		}
 		for(int i=0;i<trainingLength;i++) {
 			try {
@@ -48,10 +51,10 @@ public class AMRAP implements Training {
 				.readLine("How many exercises would you like to include in the AMRAP training?\t");
 		String AMRAPTime = console.readLine("How long do you want to perform the AMRAP training (in minutes)?\t");
 		String tempExercise;
-		ArrayList<Exercise> tempList = new ArrayList<>();
+		ArrayList<Round> tempList = new ArrayList<>();
 		for (int i = 0; i < Integer.parseInt(exerciseNumber); i++) {
 			tempExercise = console.readLine("What exercise would like to perform as the " + (i+1) + " exercise?\t");
-			tempList.add(new Exercise(tempExercise));
+			tempList.add(new Round(new Exercise(tempExercise), false, false));
 		}
 		return new AMRAP(tempList, Integer.parseInt(AMRAPTime));
 	}
